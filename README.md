@@ -2,9 +2,7 @@
 <h3 align="center">A passionate developer from Reunion Island</h3>
 <img src="https://t.bkit.co/w_648f3a3ee1d81.gif" />
 
-- 🔭 I’m currently working on [TekSH](https://github.com/SizzleUnrlsd/TekSH)
-
-- 🌱 I’m currently learning **C, C++, Python, TypeScript**
+- 🔭 I’m currently working on [Coretrace](https://github.com/CoreTrace)
 
 - 📫 How to reach me **hugo.payet@epitech.eu**
 

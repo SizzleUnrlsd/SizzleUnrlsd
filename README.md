@@ -33,4 +33,4 @@ CoreTrace is an ecosystem of tools for analyzing C/C++ programs:
 ### Contact
 
 hugo.payet@epitech.eu  
-LinkedIn: https://linkedin.com/in/hugo-payet-a56a05262/
+LinkedIn: www.linkedin.com/in/hugo-payet00

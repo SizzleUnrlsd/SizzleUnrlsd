@@ -1,36 +1,56 @@
-<h1 align="center">Hugo Payet</h1>
+<pre>
+SIZZLEUNRLSD(1)             Developer Manual             SIZZLEUNRLSD(1)
 
-<p align="center">
-Founder & Lead Developer @ CoreTrace  
-C/C++ • LLVM • Low-level Systems • Program Analysis
-</p>
+NAME
+       SizzleUnrlsd - Hugo Payet, builds program analysis tools on LLVM
 
----
+SYNOPSIS
+       sizzleunrlsd [--static] [--dyn] [--sym]
 
-### About
+DESCRIPTION
+       Creator and lead developer of <a href="https://github.com/CoreTrace">CoreTrace</a>, an open-source
+       toolchain that takes source code to actionable evidence:
+       static analysis, runtime instrumentation and CI-ready
+       reports. Started with C/C++, now extending to Python and
+       other languages.
 
-I design and build advanced program analysis tools focused on memory safety, concurrency, and undefined behavior in C/C++.
+       Compiler infrastructure
+              Clang/LLVM internals: LLVM IR, passes, LibTooling,
+              instrumentation pipelines.
 
-My work centers around:
-- static & dynamic analysis
-- Clang/LLVM internals
-- low-level systems programming
-- concurrency and memory models
+       Static analysis
+              Stack and memory safety, concurrency, undefined
+              behavior. Cross-TU reasoning, symbolic execution,
+              SMT-backed checks.
 
----
+       Runtime analysis
+              Shadow memory, allocation and bounds tracking,
+              call and vtable tracing.
 
-### CoreTrace
+       Performance
+              Parallel pipelines and SCC worklist algorithms:
+              -30% median analysis time, measured.
 
-CoreTrace is an ecosystem of tools for analyzing C/C++ programs:
+       Systems
+              Low-level C and x86 assembly. Wrote a <a href="https://github.com/SizzleUnrlsd/TekSH">shell</a> and a
+              <a href="https://github.com/SizzleUnrlsd/GarbageCollector">garbage collector</a> from scratch. Soft spot for
+              embedded and resource-constrained targets.
 
-- **coretrace** — orchestration of static & dynamic analyzers  
-- **coretrace-stack-analyzer** — LLVM-based stack analysis  
-- **coretrace-concurrency-analyzer** — concurrency & race detection  
-- **coretrace-compiler** — Clang-based instrumentation pipeline  
+LANGUAGES
+       C, C++, Python, x86 assembly, TypeScript, Rust
 
----
+ACTIVITY
+       4,600 contributions in the last year
 
-### Contact
+SEE ALSO
+       <a href="https://github.com/CoreTrace/coretrace">coretrace</a>(1), <a href="https://github.com/CoreTrace/coretrace-compiler">coretrace-compiler</a>(1),
+       <a href="https://github.com/CoreTrace/coretrace-stack-analyzer">coretrace-stack-analyzer</a>(1),
+       <a href="https://github.com/CoreTrace/coretrace-concurrency-analyzer">coretrace-concurrency-analyzer</a>(1),
+       <a href="https://github.com/CoreTrace/coretrace-runtime-analyzer">coretrace-runtime-analyzer</a>(1),
+       <a href="https://github.com/CoreTrace/coretrace-python-analyzer">coretrace-python-analyzer</a>(1)
 
-hugo.payet@epitech.eu  
-LinkedIn: www.linkedin.com/in/hugo-payet00
+CONTACT
+       <a href="mailto:hugo.payet@epitech.eu">hugo.payet@epitech.eu</a>
+       <a href="https://www.linkedin.com/in/hugo-payet00">linkedin.com/in/hugo-payet00</a>
+       <a href="https://coretrace.fr">coretrace.fr</a>
+</pre>

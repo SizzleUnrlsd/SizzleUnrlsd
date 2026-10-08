@@ -1,0 +1,26 @@
+name: Update contribution count
+on:
+  schedule:
+    - cron: "0 5 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Update README
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          count=$(gh api graphql \
+            -f query='{ user(login: "SizzleUnrlsd") { contributionsCollection { contributionCalendar { totalContributions } } } }' \
+            --jq '.data.user.contributionsCollection.contributionCalendar.totalContributions')
+          count=$(echo "$count" | sed -E ':a;s/([0-9])([0-9]{3})($|,)/\1,\2\3/;ta')
+          sed -i -E "s/[0-9,]+ contributions in the last year/${count} contributions in the last year/" README.md
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git diff --quiet || (git commit -am "chore: update contribution count" && git push)
